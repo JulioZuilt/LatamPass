@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LATAM Pass - ¡Cabemos todos!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=13">
+</head>
+<body>
+
+  <!-- NAVBAR Y HERO PRINCIPAL -->
+  <div class="hero-wrapper">
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo-link">
+          <img src="img/Logo.png" alt="LATAM Pass" class="brand-logo">
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#concurso" class="active">Concurso</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="concurso" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-text-box">
+          <span class="badge-pill">Concurso LATAM Pass</span>
+          <h1 class="hero-title">¡Cabemos<br>todos!</h1>
+          <p class="hero-subtitle">Una aventura en patota comienza con una invitación.</p>
+        </div>
+
+        <!-- Imagen visible completa en celular -->
+        <div class="hero-visual-mobile">
+          <img src="img/aQuienLlevarias.jpg" alt="¿A quién llevarías?">
+        </div>
+      </div>
+    </section>
+
+    <!-- ONDA INFERIOR DEL HERO -->
+    <div class="wave-divider wave-hero-to-steps">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path d="M0,45 Q720,-20 1440,55 L1440,70 L0,70 Z" fill="#f2ebe8"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- SECCIÓN CÓMO PARTICIPAR -->
+  <section id="como-participar" class="steps-section">
+    <div class="container steps-grid">
+      <div class="steps-intro">
+        <h2 class="section-title-dark">¿Cómo<br>participar?</h2>
+        <p class="section-desc-dark">Es muy fácil. Solo sigue estos pasos:</p>
+        <div class="pink-underline"></div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-icon-box">
+          <img src="img/completaForm.png" alt="Completa el formulario">
+        </div>
+        <h3>Completa el formulario</h3>
+        <p>Ingresa tus datos y cuéntanos a quiénes llevarías de viaje.</p>
+      </div>
+
+      <div class="step-card step-card-bordered">
+        <div class="step-number">2</div>
+        <div class="step-icon-box">
+          <img src="img/participaPremio.png" alt="Participa por el premio">
+        </div>
+        <h3>Participa por el premio</h3>
+        <p>Ya estás en el concurso por 10 millones de millas.</p>
+      </div>
+
+      <div class="step-card step-card-bordered">
+        <div class="step-number">3</div>
+        <div class="step-icon-box">
+          <img src="img/cruzaLosDedos.png" onerror="this.onerror=null;this.src='img/cruzaLosDedos.jpg';" alt="¡Cruza los dedos!">
+        </div>
+        <h3>¡Cruza los dedos!</h3>
+        <p>Y prepárate para vivir una aventura en patota.</p>
+      </div>
+    </div>
+
+    <!-- ONDA INFERIOR HACIA SECCIÓN PREMIO -->
+    <div class="wave-divider wave-steps-to-prize">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path d="M0,15 Q720,80 1440,10 L1440,70 L0,70 Z" fill="#2a1038"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SECCIÓN PREMIO Y FORMULARIO -->
+  <section id="premio" class="prize-section">
+    <div class="container prize-grid">
+      <!-- Gráfico 10 Millones de Millas completo en móvil -->
+      <div class="prize-visual-box">
+        <img src="img/diezMillones.jpg" alt="Premio 10 millones de millas" class="prize-mobile-img">
+      </div>
+
+      <!-- Tarjeta del Formulario -->
+      <div id="formulario" class="form-card">
+        <h2 class="form-title">Participa aquí</h2>
+        <p class="form-subtitle">Completa el formulario y sé parte de LATAM Pass.</p>
+
+        <form id="latamPassForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre completo *" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="rut" name="rut" placeholder="RUT *" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <input type="email" id="correo" name="correo" placeholder="Correo electrónico *" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="telefono" name="telefono" placeholder="Teléfono *" required>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <select id="acompanantes" name="acompanantes" required>
+              <option value="" disabled selected>¿A quiénes llevarías? *</option>
+              <option value="familia">A mi familia completa</option>
+              <option value="amigos">A mi grupo de amigos</option>
+              <option value="pareja">A mi pareja y amigos cercanos</option>
+              <option value="companeros">A mis compañeros de aventura</option>
+            </select>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="aceptoBases" name="aceptoBases" required>
+            <label for="aceptoBases">
+              Acepto las <a href="#bases" id="linkBases">bases y condiciones</a> del concurso *
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            Enviar mi participación <span>&rarr;</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER INFERIOR GENTE ABRAZADA CON CURVA SUPERIOR SIMÉTRICA -->
+  <section class="banner-friends">
+    <div class="wave-divider wave-prize-to-friends">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path d="M0,0 L1440,0 L1440,34 C1050,74 420,74 0,16 Z" fill="#2a1038"></path>
+      </svg>
+    </div>
+    <img src="img/genteAbrazada.jpg" alt="Porque los mejores panoramas son los que compartimos" class="banner-friends-img">
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="bases" class="footer">
+    <div class="container footer-container">
+      <div class="footer-logo">
+        <img src="img/Logo.png" alt="LATAM Pass" class="brand-logo">
+      </div>
+
+      <div class="footer-links">
+        <a href="#bases" class="footer-link-item">Bases y condiciones</a>
+        <span class="footer-sep">|</span>
+        <a href="#privacidad" class="footer-link-item">Política de privacidad</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="X">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DE SIMULACIÓN DE ENVÍO -->
+  <div class="modal-overlay" id="simulationModal">
+    <div class="modal-box">
+      <div class="modal-icon" id="modalIcon">&#10003;</div>
+      <h3 id="modalTitle">¡Participación registrada!</h3>
+      <p id="modalMessage"></p>
+      <button type="button" class="btn-primary" id="closeModalBtn">Aceptar</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
