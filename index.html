@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=13">
+  <link rel="stylesheet" href="css/styles.css?v=18">
 </head>
 <body>
 
@@ -16,6 +16,8 @@
     <header class="navbar">
       <div class="container nav-container">
         <a href="#" class="logo-link">
+          <img src="img/Logo2.png" alt="LATAM en Patota" class="brand-logo brand-logo-secondary">
+          <span class="logo-divider" aria-hidden="true"></span>
           <img src="img/Logo.png" alt="LATAM Pass" class="brand-logo">
         </a>
 
@@ -40,10 +42,10 @@
       </div>
     </section>
 
-    <!-- ONDA INFERIOR DEL HERO -->
+    <!-- ONDA INFERIOR DEL HERO (ASIMÉTRICA ALTA A LA IZQ, BAJA A LA DER) -->
     <div class="wave-divider wave-hero-to-steps">
-      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
-        <path d="M0,45 Q720,-20 1440,55 L1440,70 L0,70 Z" fill="#f2ebe8"></path>
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,15 C320,-15 620,65 980,95 C1180,112 1330,105 1440,88 L1440,120 L0,120 Z" fill="#f2ebe8"></path>
       </svg>
     </div>
   </div>
@@ -84,17 +86,17 @@
         <p>Y prepárate para vivir una aventura en patota.</p>
       </div>
     </div>
-
-    <!-- ONDA INFERIOR HACIA SECCIÓN PREMIO -->
-    <div class="wave-divider wave-steps-to-prize">
-      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
-        <path d="M0,15 Q720,80 1440,10 L1440,70 L0,70 Z" fill="#2a1038"></path>
-      </svg>
-    </div>
   </section>
 
   <!-- SECCIÓN PREMIO Y FORMULARIO -->
   <section id="premio" class="prize-section">
+    <!-- ONDA SUPERIOR SOBRE EL PREMIO (MANTIENE INTACTA LA IMAGEN DE FONDO) -->
+    <div class="wave-divider wave-steps-to-prize">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,0 L1440,0 L1440,108 C1140,128 840,52 460,24 C240,8 100,14 0,28 Z" fill="#f2ebe8"></path>
+      </svg>
+    </div>
+
     <div class="container prize-grid">
       <!-- Gráfico 10 Millones de Millas completo en móvil -->
       <div class="prize-visual-box">
@@ -103,6 +105,13 @@
 
       <!-- Tarjeta del Formulario -->
       <div id="formulario" class="form-card">
+        <!-- Tres rayas decorativas en la esquina superior derecha -->
+        <div class="form-rays" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         <h2 class="form-title">Participa aquí</h2>
         <p class="form-subtitle">Completa el formulario y sé parte de LATAM Pass.</p>
 
@@ -150,11 +159,11 @@
     </div>
   </section>
 
-  <!-- BANNER INFERIOR GENTE ABRAZADA CON CURVA SUPERIOR SIMÉTRICA -->
+  <!-- BANNER INFERIOR GENTE ABRAZADA CON ONDA ORGÁNICA SUPERIOR -->
   <section class="banner-friends">
     <div class="wave-divider wave-prize-to-friends">
-      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
-        <path d="M0,0 L1440,0 L1440,34 C1050,74 420,74 0,16 Z" fill="#2a1038"></path>
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,0 L1440,0 L1440,22 C1120,45 840,112 460,96 C230,86 100,45 0,25 Z" fill="#2a1038"></path>
       </svg>
     </div>
     <img src="img/genteAbrazada.jpg" alt="Porque los mejores panoramas son los que compartimos" class="banner-friends-img">

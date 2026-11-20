@@ -70,10 +70,29 @@ body {
   justify-content: space-between;
 }
 
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
 .brand-logo {
-  height: 62px;
+  height: 54px;
   width: auto;
   display: block;
+}
+
+.logo-divider {
+  width: 1px;
+  height: 28px;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: inline-block;
+}
+
+.brand-logo-secondary {
+  height: 58px;
+  mix-blend-mode: screen;
 }
 
 .nav-links {
@@ -184,7 +203,7 @@ body {
 }
 
 /* =========================================
-   ONDAS DIVISORIAS SIN LÍNEAS DE UNIÓN
+   ONDAS DIVISORIAS ORGÁNICAS SIN LÍNEAS DE UNIÓN
    ========================================= */
 .wave-divider {
   width: 100%;
@@ -193,12 +212,13 @@ body {
   margin-bottom: -2px;
   position: relative;
   z-index: 4;
+  pointer-events: none;
 }
 
 .wave-divider svg {
   display: block;
   width: 100%;
-  height: 30px;
+  height: 46px;
   transform: translateY(1px);
 }
 
@@ -207,7 +227,7 @@ body {
    ========================================= */
 .steps-section {
   background-color: var(--naranja-claro-bg);
-  padding-top: 22px;
+  padding-top: 14px;
   position: relative;
   z-index: 3;
 }
@@ -216,7 +236,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .steps-intro {
@@ -316,9 +336,22 @@ body {
   background-size: 135% auto;
   background-position: left top;
   background-repeat: no-repeat;
-  padding: 0 0 44px;
+  padding: 46px 0 44px;
   position: relative;
   z-index: 2;
+}
+
+.wave-steps-to-prize {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  margin-bottom: 0;
+}
+
+.wave-steps-to-prize svg {
+  transform: translateY(0);
 }
 
 .prize-grid {
@@ -346,6 +379,11 @@ body {
   box-shadow: 0 18px 40px rgba(20, 8, 36, 0.65);
   position: relative;
   z-index: 2;
+}
+
+/* Tres rayas decorativas en la esquina superior derecha del formulario */
+.form-rays {
+  display: none;
 }
 
 .form-title {
@@ -457,7 +495,7 @@ body {
 }
 
 /* =========================================
-   BANNER GENTE ABRAZADA CON CURVA SUPERIOR CUBIERTA
+   BANNER GENTE ABRAZADA CON ONDA SUPERIOR ORGÁNICA
    ========================================= */
 .banner-friends {
   position: relative;
@@ -470,7 +508,7 @@ body {
 
 .wave-prize-to-friends {
   position: absolute;
-  top: -3px;
+  top: -2px;
   left: -2px;
   width: calc(100% + 4px);
   z-index: 5;
@@ -633,14 +671,26 @@ body {
     padding: 8px 0;
   }
 
+  .logo-link {
+    gap: 18px;
+  }
+
   .brand-logo,
   .footer .brand-logo {
-    height: 120px;
+    height: 115px;
+  }
+
+  .logo-divider {
+    height: 56px;
+  }
+
+  .brand-logo-secondary {
+    height: 125px;
   }
 
   .nav-container {
     justify-content: flex-start;
-    gap: 50px;
+    gap: 44px;
   }
 
   .hero-wrapper {
@@ -648,14 +698,14 @@ body {
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
-    min-height: 570px;
+    min-height: 590px;
   }
 
   .hero-section {
     flex: 1;
     display: flex;
     align-items: center;
-    padding: 15px 0 85px;
+    padding: 15px 0 95px;
   }
 
   .hero-visual-mobile {
@@ -678,7 +728,11 @@ body {
   }
 
   .wave-divider svg {
-    height: 55px;
+    height: 95px;
+  }
+
+  .steps-section {
+    padding-top: 10px;
   }
 
   .steps-grid {
@@ -686,7 +740,7 @@ body {
     grid-template-columns: 1.1fr 1fr 1fr 1fr;
     gap: 20px;
     align-items: center;
-    padding-bottom: 50px;
+    padding-bottom: 35px;
   }
 
   .steps-intro {
@@ -707,13 +761,13 @@ body {
     border-left: 1px solid var(--rosa-claro-borde);
   }
 
-  /* SECCIÓN PREMIO Y FORMULARIO EN PC - CUADRADO JUSTO EN LA ESQUINA DE LAS 3 RAYAS */
+  /* SECCIÓN PREMIO Y FORMULARIO EN PC - CON LAS 3 RAYAS COMPLETAS EN LA ESQUINA */
   .prize-section {
     background-image: url('../img/diezMillones.jpg');
-    background-size: 100% 100%;
-    background-position: center;
+    background-size: cover;
+    background-position: left center;
     background-repeat: no-repeat;
-    padding: 85px 0 45px;
+    padding: 155px 0 65px;
   }
 
   .prize-section .container.prize-grid {
@@ -736,6 +790,46 @@ body {
     margin-left: auto;
     margin-right: 0;
     padding: 26px 24px;
+  }
+
+  .form-rays {
+    display: block;
+    position: absolute;
+    top: -34px;
+    right: -46px;
+    width: 55px;
+    height: 55px;
+    pointer-events: none;
+  }
+
+  .form-rays span {
+    position: absolute;
+    display: block;
+    height: 5px;
+    background-color: var(--rosa-vivido);
+    border-radius: 999px;
+    transform-origin: left center;
+  }
+
+  .form-rays span:nth-child(1) {
+    width: 34px;
+    top: 16px;
+    left: 4px;
+    transform: rotate(-52deg);
+  }
+
+  .form-rays span:nth-child(2) {
+    width: 38px;
+    top: 28px;
+    left: 12px;
+    transform: rotate(-24deg);
+  }
+
+  .form-rays span:nth-child(3) {
+    width: 34px;
+    top: 41px;
+    left: 15px;
+    transform: rotate(0deg);
   }
 
   .form-title {
